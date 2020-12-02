@@ -1,9 +1,13 @@
 // Apparently Needs to have the const dependencies
 const fs = require("fs");
 const inquirer = require("inquirer");
-inquirer.registerPrompt('suggest', require('inquirer-prompt-suggest'));
 const generateMarkdown = require("./utils/generateMarkdown.js");
 const fileName = "README.md"
+
+// error is coming from this line
+// https://developer.aliyun.com/mirror/npm/package/inquirer-prompt-suggest
+// do this tomorrow
+inquirer.registerPrompt('suggest', require('inquirer-prompt-suggest'));
 
 // array of questions for user
 const questions = [
@@ -83,8 +87,6 @@ function init() {
 
 // function call to initialize program
 init();
-
-// its not working right now
 
 // need to add Video of my code
 // record in VSCode
