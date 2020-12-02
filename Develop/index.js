@@ -79,10 +79,12 @@ function init() {
         //writes the answers and puts them down as data.
         writeToFile(fileName, generateMarkdown(data));
     })
-};
+}
 
 // function call to initialize program
 init();
+
+// its not working right now
 
 // need to add Video of my code
 // record in VSCode
