@@ -1,8 +1,9 @@
 // Apparently Needs to have the const dependencies
 const fs = require("fs");
 const inquirer = require("inquirer");
+inquirer.registerPrompt('suggest', require('inquirer-prompt-suggest'));
 const generateMarkdown = require("./utils/generateMarkdown.js");
-const api = ("./api");
+const fileName = "README.md"
 
 // array of questions for user
 const questions = [
@@ -74,11 +75,14 @@ function writeToFile(fileName, data) {
 // either this way or async way
 function init() {
     // prompts the user to answer the questions
-    inquirer.prompt(questions).then((response) => {
-        //writes the answers and puts them down as responses.
-        writeToFile(fileName, generateMarkdown(response));
+    inquirer.prompt(questions).then((data) => {
+        //writes the answers and puts them down as data.
+        writeToFile(fileName, generateMarkdown(data));
     })
 };
 
 // function call to initialize program
 init();
+
+// need to add Video of my code
+// record in VSCode
