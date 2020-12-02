@@ -27,7 +27,12 @@ function generateMarkdown(data) {
   You can reach me at ${data.email}
 
   ## License
-  ${data.license}
+  
+  This project is licensed under the [@${data.license}]
+
+  ## Disclaimer
+
+  This project was made for educational purposes only.
 `;
 }
 

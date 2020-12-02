@@ -5,7 +5,7 @@ When creating an open source project on GitHub, it is important to have a qualit
  to create a command-line application that dynamically generates a professional README.md from a user's input. The application will be invoked with the following command:
 
 ```
-node index.js
+Node Index.js
 ```
 
 ## User Story

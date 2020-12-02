@@ -53,6 +53,7 @@ const questions = [
      // Licenses
      // https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/licensing-a-repository
      // May have to change into Checkbox, as my dumb ass wanted to be special and added so many new Licenses.
+     // Especially that 'Do What F*CK You Want To Public License', it just seems funny to me. 
     {
         type: "list",
         name: "license",
@@ -66,7 +67,7 @@ const questions = [
 // function to write README file
 function writeToFile(fileName, data) {
     // name README File
-    fileName = "custom-README.md"
+    fileName = "Project-README.md"
     // write README process
     fs.writeFile(fileName, data, (err) => {
         // Just in case of an error
