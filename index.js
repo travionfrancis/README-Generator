@@ -1,9 +1,9 @@
-// Apparently Needs to have the const dependencies
+// Needs to have the const dependencies
 const fs = require("fs");
 const inquirer = require("inquirer");
 const fileName = "README.md"
 
-// Modules
+// Modules that are desperately needed, had to search up.
 const api = ("./api")
 const generateMarkdown = require("./utils/generateMarkdown.js");
 inquirer.registerPrompt('suggest', require('inquirer-prompt-suggest'));
