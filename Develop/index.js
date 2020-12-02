@@ -1,3 +1,9 @@
+// Apparently Needs to have the const dependencies
+const fs = require("fs");
+const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
+const api = ("./api");
+
 // array of questions for user
 const questions = [
     // title of Project 
