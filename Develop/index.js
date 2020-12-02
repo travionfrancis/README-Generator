@@ -33,7 +33,7 @@ const questions = [
     // Installing Dependecies 
     {
         type: "input",
-        name: "installing",
+        name: "installation",
         message: "What command do you want to use to install dependencies? ex: npm install"
     },
     // test run
@@ -50,6 +50,7 @@ const questions = [
         choices: ["Apache License 2.0", "Boost Software License 1.0", "BSD 2-Clause 'Simplified' License","BSD 3-Clause 'New' or 'Revised' License", "Creative Commons Zero v1.0 Universal", "Eclipse Public License 2.0", "GNU Affero General Public License v3.0", "GNU General Public License v2.0", "GNU Lesser General Public License v2.1","GNU General Public License v3.0","Do What F*CK You Want To Public License","ISC","Microsoft Public License","Mozilla Public License",]
     },
     // Add in more later, just in case
+    // Also should change the order of these questions soon
 ];
 
 // function to write README file
@@ -69,14 +70,14 @@ function writeToFile(fileName, data) {
 }
 
 // function to initialize program
+//either this way or async way
 function init() {
     // prompts the user to answer the questions
     inquirer.prompt(questions).then((response) => {
         //writes the answers and puts them down as responses.
         writeToFile(fileName, generateMarkdown(response));
     })
-
-}
+};
 
 // function call to initialize program
 init();
