@@ -47,13 +47,25 @@ const questions = [
         type: "list",
         name: "license",
         message: "What License will your Project use?",
-        choices: ["Apache License 2.0", "Boost Software License 1.0", "BSD 2-Clause 'Simplified' License","BSD 3-Clause 'New' or 'Revised' License", "Creative Commons Zero v1.0 Universal", "Eclipse Public License 2.0", "GNU Affero General Public License v3.0", "GNU General Public License v2.0", "GNU Lesser General Public License v2.1","GNU General Public License v3.0"]
+        choices: ["Apache License 2.0", "Boost Software License 1.0", "BSD 2-Clause 'Simplified' License","BSD 3-Clause 'New' or 'Revised' License", "Creative Commons Zero v1.0 Universal", "Eclipse Public License 2.0", "GNU Affero General Public License v3.0", "GNU General Public License v2.0", "GNU Lesser General Public License v2.1","GNU General Public License v3.0","Do What F*CK You Want To Public License","ISC","Microsoft Public License","Mozilla Public License",]
     },
     // Add in more later, just in case
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
+    // name README File
+    fileName = "custom-README.md"
+    // write README process
+    fs.writeFile(fileName, data, (err) => {
+        // Just in case of an error
+        //https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
+        if (err) {
+            console.log(err);
+        }
+        // Make sure if it works, ofc
+        console.log("It Worked!");
+    });
 
 }
 
