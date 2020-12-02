@@ -66,11 +66,15 @@ function writeToFile(fileName, data) {
         // Make sure if it works, ofc
         console.log("It Worked!");
     });
-
 }
 
 // function to initialize program
 function init() {
+    // prompts the user to answer the questions
+    inquirer.prompt(questions).then((response) => {
+        //writes the answers and puts them down as responses.
+        writeToFile(fileName, generateMarkdown(response));
+    })
 
 }
 
