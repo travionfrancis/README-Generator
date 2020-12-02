@@ -43,6 +43,7 @@ const questions = [
         message: "What command should run the Project test? ex: npm test"
     },
      // Licenses
+     // May have to change into Checkbox, as my dumb ass wanted to be special and added so many new Licenses.
     {
         type: "list",
         name: "license",
@@ -70,7 +71,7 @@ function writeToFile(fileName, data) {
 }
 
 // function to initialize program
-//either this way or async way
+// either this way or async way
 function init() {
     // prompts the user to answer the questions
     inquirer.prompt(questions).then((response) => {
